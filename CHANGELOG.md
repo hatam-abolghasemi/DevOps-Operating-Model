@@ -4,6 +4,13 @@ All notable changes to Open Kitchen are documented here. Versions follow the [ve
 
 ## [Unreleased]
 
+### Changed
+
+- Repositories are named `<team>/<concern>/<tool>`, without the environment. Environments live inside the repository. App repositories sit under `devops/cicd/apps/<app>`.
+- Concerns: Orchestration is now Compute ("where things run"), Networking covers traffic at any OSI layer, and Data covers storing data and keeping it safe.
+- Sample principles: the environment is no longer part of a name (principles 8 and 11), and the production environment is spelled `prd` (principle 9).
+- Weekly changelog template: items name the environment as `<tool> (<environment>)`.
+
 ## [1.0.2] - 2026-10-28
 
 ### Added

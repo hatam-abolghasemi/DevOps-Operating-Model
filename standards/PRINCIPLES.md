@@ -119,7 +119,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 **In practice:**
 
 - Names identify. Metadata belongs in labels, tags and docs.
-- Example: `devops/networking/haproxy-prd` says what it is, where it belongs, and which environment it serves.
+- Example: `devops/networking/haproxy` says what it is and where it belongs. Which environment it serves is metadata, not part of the name.
 
 ---
 
@@ -132,7 +132,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 - No complicated mappings.
 - Different aspects are expressed in different views (labels, dashboards, docs), not packed into identifiers.
 - When forced to rename, first ask whether the new name can be applied everywhere the identity lives.
-- `prod` is `prod` in every repo, cluster, label, dashboard and document.
+- `prd` is `prd` in every cluster, label, dashboard and document.
 
 ---
 
@@ -161,7 +161,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 **In practice:**
 
 - Every environment justifies itself by the class of failure it separates.
-- The environment is part of a thing's identity: `-prd`, `-stg`, `-uat`, `-dr`.
+- The cluster is the environment: `prd`, `stg`, `uat`, `dr`. Everything inside keeps the same name in every environment.
 - Environments live and die with the work. Feature-review environments come up per branch and go down with a TTL or when the branch is deleted.
 - Where per-feature environments aren't possible, an environment scales to zero when unused and comes back up when needed.
 

@@ -4,7 +4,7 @@ Minimum output met: <yes | no, and why>
 
 ## Delivered
 
-- <tool>-<environment>: <what changed> (<who>) → <money | time | risk | customer experience>: <effect>
+- <tool> (<environment>): <what changed> (<who>) → <money | time | risk | customer experience>: <effect>
 
 ## Internal work
 

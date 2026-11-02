@@ -31,15 +31,15 @@ A group handles one concern. Engineers belong to the team; group membership rota
 
 | Group | Concern | Example tools |
 | --- | --- | --- |
-| Networking | Routing, load balancing, DNS, proxies | HAProxy, Envoy, CoreDNS |
-| Orchestration | Containers and orchestrators | Kubernetes, KEDA |
-| Observability | Metrics, logs, traces | Prometheus, Grafana, Loki |
-| Data | Storage and messaging | Ceph, Redis, RabbitMQ |
+| Networking | Traffic at any OSI layer | HAProxy, Envoy, CoreDNS |
+| Compute | Where things run | Kubespray, containerd, KEDA |
+| CI/CD | Building, testing, delivering | GitLab, Argo CD, SonarQube |
+| Observability | Seeing system health | Prometheus, Grafana, Loki |
+| Data | Storing data and keeping it safe | Ceph, Redis, Velero |
 | Security | Secrets, policy, identity | Vault, Keycloak, Kyverno |
-| CI/CD | Build, test, delivery | GitLab, Argo CD, SonarQube |
-| Others | Anything without a concern yet | Chat, video conferencing |
+| Others | Nothing fits yet | Chat, video conferencing |
 
-Repositories follow concerns: `<team>/<concern>/<tool>-<environment>`, for example `devops/networking/haproxy-prd`.
+Repositories follow concerns: `<team>/<concern>/<tool>`, for example `devops/networking/haproxy`. One repository per tool; environments live inside it, never in its name. The apps the team delivers sit under CI/CD: `devops/cicd/apps/<app>`.
 
 **Placing a new tool:** if the tool were removed, what need would remain? Place it in that need's group. No match goes to Others. When several tools in Others share a need, it becomes a new group.
 
