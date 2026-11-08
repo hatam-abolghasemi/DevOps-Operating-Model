@@ -1,12 +1,12 @@
 ---
 name: Challenge a rule
-about: A rule contradicts another, leaves a gap, or breaks in practice
+about: A belief, team rule, convention or practice contradicts another, leaves a gap, or breaks in practice
 labels: rule
 ---
 
 ## Rule
 
-<section and rule, with a link>
+<layer, file and section, with a link>
 
 ## What breaks
 
