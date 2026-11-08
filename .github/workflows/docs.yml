@@ -1,19 +1,33 @@
-name: docs
+name: Docs
 
 on:
   push:
     branches: [main]
+  pull_request:
+  workflow_dispatch:
   workflow_call:
+    inputs:
+      ref:
+        description: "Ref to check, e.g. a release tag"
+        type: string
+        required: false
+        default: ""
 
 permissions:
   contents: read
 
+concurrency:
+  group: docs-${{ github.workflow }}-${{ inputs.ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   lint:
+    name: Markdown lint
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ inputs.ref }}
           persist-credentials: false
       - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
         with:
@@ -22,10 +36,12 @@ jobs:
             !.github/**
 
   links:
+    name: Links
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ inputs.ref }}
           persist-credentials: false
       - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:

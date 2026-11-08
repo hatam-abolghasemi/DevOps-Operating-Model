@@ -1,6 +1,6 @@
 ---
 name: Challenge a rule
-about: A belief, team rule, convention or practice contradicts another, leaves a gap, or breaks in practice
+about: A principle, team rule, convention or practice contradicts another, leaves a gap, or breaks in practice
 labels: rule
 ---
 
