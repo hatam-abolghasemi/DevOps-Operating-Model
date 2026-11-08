@@ -7,6 +7,7 @@ Rules for the manifests the team writes. They extend [naming](naming.md) inside 
 ## Namespaces
 
 - Namespace = tool or app name, the same in every cluster.
+- A feature-review namespace in `dev` is `<name>-<branch>` ([naming](naming.md#clusters-and-environments)). Everything inside it keeps the names it has everywhere else.
 
 ## Components
 

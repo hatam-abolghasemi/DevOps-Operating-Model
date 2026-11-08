@@ -164,7 +164,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 
 - Every environment justifies itself by the class of failure it separates.
 - The cluster is the environment, and everything inside keeps the same name in every environment. The environment names are in [naming](../3-conventions/naming.md#clusters-and-environments).
-- Environments live and die with the work. Feature-review environments come up per branch and go down with a TTL or when the branch is deleted.
+- Environments live and die with the work. Feature-review environments come up per branch, as namespaces in `dev`, and go down with a TTL or when the branch is deleted.
 - Where per-feature environments aren't possible, an environment scales to zero when unused and comes back up when needed.
 
 ---

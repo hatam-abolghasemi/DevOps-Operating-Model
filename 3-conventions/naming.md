@@ -34,5 +34,6 @@ Environments follow [belief 11](../1-values/principles.md#11-environments-exist-
 - One cluster per environment; the cluster is the environment.
 - Environment names: `prd`, `dr`, `uat`, `stg`, `dev`. These spellings are used everywhere: clusters, labels, dashboards, docs and changelogs.
 - A cluster that is not an environment is named after what it hosts.
+- Feature-review environments are the one exception to one cluster per environment. They live in `dev` as namespaces named `<name>-<branch>`, where the branch is reduced to lowercase letters, digits and `-`, and the whole name still fits in 63 characters. They are deleted with the branch or when their TTL ends.
 - Site, datacenter and hardware are labels on the cluster, never part of its name.
 - A replaced cluster is renamed once, to `<env>-old`, while the new one takes `<env>`. See [replacing a cluster](../4-practices/replacing-a-cluster.md).

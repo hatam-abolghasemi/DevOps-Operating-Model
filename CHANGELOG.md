@@ -31,6 +31,8 @@ The repository grows from a team model into a whole operating model: values, tea
 - The on-call rules name the emergency wait and emergency change review defaults they use.
 - Team record: "Standards" is now "Our copy of the model", and the team-level answers are "Our team decisions", matching the adoption guide.
 
+- Feature-review environments live in `dev` as namespaces named `<name>-<branch>`, the one exception to one cluster per environment (principle 11, naming, Kubernetes, Argo CD).
+
 ### Removed
 
 - The `owner` namespace label: the `group` label already names the concern, and each concern has one owning group.

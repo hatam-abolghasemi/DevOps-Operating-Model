@@ -10,7 +10,7 @@ Argo CD is a tool like any other. Its own configuration lives in `<team>/cicd/ar
 | --- | --- | --- |
 | AppProject | Tools: `<concern>`. Apps: `apps-<domain>` | `observability`, `apps-payments` |
 | ApplicationSet | `<name>`, in the file `appsets/<group>/<name>.yaml` | `orders` |
-| Application | `<name>-<env>`, or `<name>` for something without an environment | `orders-stg`, `gitlab` |
+| Application | `<name>-<env>`, or `<name>` for something without an environment. A feature-review Application is named after its namespace, `<name>-<branch>` | `orders-stg`, `gitlab`, `orders-new-checkout` |
 
 - One ApplicationSet per repository, generating one Application per environment.
 
