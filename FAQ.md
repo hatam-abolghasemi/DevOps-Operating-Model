@@ -1,5 +1,15 @@
 # FAQ
 
+## Values
+
+**Do we have to adopt these beliefs?**
+No. They are one engineer's beliefs, and the rest of the model works with your own. Conventions cite beliefs, so update those links when you change one.
+
+**Why two value ladders?**
+They judge different things. System values judge how systems behave; team values judge how people organize. Reliability, the first team value, is where they meet.
+
+## Team
+
 **Does it manage developers or QA?**
 No. Only the DevOps team.
 
@@ -24,11 +34,23 @@ Engineers are in every group, so rotation barely applies. The rest still works.
 **Is DORA the EU regulation?**
 No. DevOps Research and Assessment.
 
+## Conventions
+
+**Why concerns, not tools or business domains?**
+Concerns outlive tools and overlap least. A team split by business domain repeats the same tools in every domain, and a team split by tool reorganizes every time a tool is replaced. See [concerns](3-conventions/concerns.md#why-concerns).
+
+**Why no environment in names?**
+The environment is where something runs, not what it is ([belief 8](1-values/principles.md#8-a-name-is-a-self-documenting-identifier)). Putting it in the name multiplies repositories and breaks when things move.
+
+**Why no owner label?**
+Each concern has exactly one owning group, and the `group` label already names the concern. A second label would be a second place to keep in sync.
+
 ## Open challenges
 
 - Measuring the value of internal work and prevented incidents.
 - Organized voting by a few unhappy teams.
 - Mapping to OKRs or sprints.
 - How much say partners should have.
+- Conventions for container images.
 
-Ideas welcome in [Discussions](https://github.com/hatam-abolghasemi/open-kitchen/discussions).
+Ideas welcome in [Discussions](https://github.com/hatam-abolghasemi/devops-operating-model/discussions).

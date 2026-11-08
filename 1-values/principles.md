@@ -1,16 +1,16 @@
-# DevOps Principles
+# Principles
 
-*A sample of team standards for Open Kitchen.*
+*Layer 1 of the [DevOps Operating Model](../README.md): why.*
 
-The [manifesto](MANIFESTO.md) states what we believe. This document explains each belief and how it shows up in daily work. The examples come from the author's own team; replace them with yours if you adopt these standards.
+The [manifesto](manifesto.md) states what we believe. This document explains each belief and how it shows up in daily work. The examples come from the author's own work; replace them with yours if you adopt these beliefs.
 
-Every section below has the same shape: the belief, **why** we hold it, and what it looks like **in practice**. Inside "in practice", the rule comes first, then the mechanism, then concrete examples.
+Every section below has the same shape: the belief, **why** we hold it, and what it looks like **in practice**. Inside "in practice", the rule comes first, then the mechanism, then concrete examples. Where a belief turns into a written rule, the rule lives in the [conventions](../3-conventions/) and links back here.
 
 ---
 
-## Values
+## System values
 
-Three values sit under everything, in ranked order. When they collide, the higher one wins.
+Three values sit under everything, in ranked order. When they collide, the higher one wins. They judge systems; the [team values](../2-team/model.md#team-values) judge how people organize around them.
 
 1. **Recovery.** How fast we detect, understand and recover from failure.
 2. **Predictability.** The system does only what is written down.
@@ -120,6 +120,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 
 - Names identify. Metadata belongs in labels, tags and docs.
 - Example: `devops/networking/haproxy` says what it is and where it belongs. Which environment it serves is metadata, not part of the name.
+- The full rules are in [naming](../3-conventions/naming.md).
 
 ---
 
@@ -133,6 +134,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 - Different aspects are expressed in different views (labels, dashboards, docs), not packed into identifiers.
 - When forced to rename, first ask whether the new name can be applied everywhere the identity lives.
 - `prd` is `prd` in every cluster, label, dashboard and document.
+- Renaming a live thing follows a practice, such as [replacing a cluster](../4-practices/replacing-a-cluster.md).
 
 ---
 
@@ -161,7 +163,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 **In practice:**
 
 - Every environment justifies itself by the class of failure it separates.
-- The cluster is the environment: `prd`, `stg`, `uat`, `dr`. Everything inside keeps the same name in every environment.
+- The cluster is the environment, and everything inside keeps the same name in every environment. The environment names are in [naming](../3-conventions/naming.md#clusters-and-environments).
 - Environments live and die with the work. Feature-review environments come up per branch and go down with a TTL or when the branch is deleted.
 - Where per-feature environments aren't possible, an environment scales to zero when unused and comes back up when needed.
 
@@ -201,6 +203,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 **In practice:**
 
 - Tools are pulled in by pain, never pushed in by fashion. Find first; build only when building is worth it.
+- Every tool that enters gets one home: [placing a tool](../4-practices/placing-a-tool.md).
 - A small slice of a big tool gets built, cleanly. Spegel offered far more than we needed, so Angry Duck was built for the part we did.
 - Most of a flawed tool gets kept. Sentry has flaws, but it solves too many problems to rebuild.
 - Building in-house is only cheap when the code is clean and modular, so people unfamiliar with the language can still work with it, as with our Lua modules.
@@ -237,7 +240,7 @@ Recovery ranks first because it is bounded and measurable: MTTR is a number. Pre
 
 **In practice:**
 
-- Every standard and decision has a re-check date.
+- Every standard and decision has a re-check date. How changes are made is in [changing the model](../4-practices/changing-the-model.md).
 - Review is periodic, not only triggered by pain.
 - Repeated workarounds around a tool mean it no longer fits.
 - This repo changes too.

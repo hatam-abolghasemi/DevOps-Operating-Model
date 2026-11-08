@@ -1,12 +1,14 @@
 # <Team> Team Record
 
-Model version: Open Kitchen v1.0.2
+Model version: DevOps Operating Model v<X.Y.Z>
 Last renewed: <date>
 Next rotation points: <cohort A date>, <cohort B date>, <cohort C date>
 
-## Standards
+## Our copy of the model
 
-<Open Kitchen sample, as of v1.0.2 | our own, with link | the sample with our changes, with link>
+Repository: <link>
+Owned by: <group>
+Changed from upstream: <none | values | conventions | practices, with links>
 
 ## Maturity framework
 
@@ -20,7 +22,7 @@ Next rotation points: <cohort A date>, <cohort B date>, <cohort C date>
 
 | Group | What it handles | Repository path | Engineers | Partners |
 | --- | --- | --- | --- | --- |
-| <group> | <concern definition> | <path> | <names> | <names and teams> |
+| <group> | <concern need> | <team>/<concern>/ | <names> | <names and teams> |
 
 ## Current gateways
 

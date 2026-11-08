@@ -1,18 +1,20 @@
 cff-version: 1.2.0
-message: "If you refer to Open Kitchen, please cite it as below."
-title: "Open Kitchen: A transparent, self-governing management model for DevOps teams of any size"
+message: "If you refer to the DevOps Operating Model, please cite it as below."
+title: "DevOps Operating Model: Values, team model, conventions and practices for running a DevOps team"
 type: generic
 authors:
   - given-names: Hatam
     family-names: Abolghasemi
-version: 1.0.1
-date-released: 2026-10-11
+version: 1.0.2
+date-released: 2026-10-28
 license: CC-BY-4.0
-repository-code: "https://github.com/hatam-abolghasemi/open-kitchen"
+repository-code: "https://github.com/hatam-abolghasemi/devops-operating-model"
 keywords:
   - devops
   - team-management
   - platform-engineering
   - self-governance
   - sociotechnical
+  - naming-conventions
+  - kubernetes
   - dora-metrics

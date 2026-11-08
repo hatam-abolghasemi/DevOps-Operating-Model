@@ -1,12 +1,16 @@
-# The Open Kitchen Model
+# Team model
+
+*Layer 2 of the [DevOps Operating Model](../README.md): who.*
+
+How a DevOps team organizes itself so it doesn't split into fixed sub-teams and rebuild the silos DevOps exists to break. The team is organized around technical [concerns](../3-conventions/concerns.md). Each concern has one **group** of engineers. Every engineer is in several groups, and membership rotates, so no group becomes a silo. Each group writes its own **charter**, publishes its work weekly, and is judged by everyone it affects.
 
 ## Scope
 
-Open Kitchen governs the DevOps team only. Other teams organize themselves their own way.
+The model governs the DevOps team only. Other teams organize themselves their own way.
 
-## Values
+## Team values
 
-In this order. When two collide, the higher one wins.
+In this order. When two collide, the higher one wins. They judge how people organize; the [system values](../1-values/manifesto.md#system-values) judge the systems they run, and the first team value is keeping them.
 
 1. **Reliability.** The system stays up. A happy or fast group that is unreliable is failing.
 2. **Happiness.** The team and the people it works with are happy. Load, on-call and dull work are shared fairly, and nobody burns out to keep things running.
@@ -14,11 +18,11 @@ In this order. When two collide, the higher one wins.
 4. **Distribution.** Knowledge and load spread across the team. No silos, no single person anything depends on.
 5. **Low maintenance.** The model runs itself. It asks little of the manager and HR, and little upkeep of the team.
 
-## Principles
+## In short
 
 1. Production comes first. No rule may block operations.
 2. Every repository and tool belongs to exactly one group.
-3. Each group writes its own recipe.
+3. Each group writes its own charter.
 4. Outsiders don't dictate to a group; they vote happy or unhappy.
 5. Only sustained unhappiness or unreliability forces a group to review its work.
 6. Everything is visible.
@@ -27,21 +31,9 @@ In this order. When two collide, the higher one wins.
 
 ## Groups
 
-A group handles one concern. Engineers belong to the team; group membership rotates.
+A group handles one [concern](../3-conventions/concerns.md) and owns every tool and repository in it: `<team>/<concern>/*` in [naming](../3-conventions/naming.md#repositories). Engineers belong to the team; group membership rotates.
 
-| Group | Concern | Example tools |
-| --- | --- | --- |
-| Networking | Traffic at any OSI layer | HAProxy, Envoy, CoreDNS |
-| Compute | Where things run | Kubespray, containerd, KEDA |
-| CI/CD | Building, testing, delivering | GitLab, Argo CD, SonarQube |
-| Observability | Seeing system health | Prometheus, Grafana, Loki |
-| Data | Storing data and keeping it safe | Ceph, Redis, Velero |
-| Security | Secrets, policy, identity | Vault, Keycloak, Kyverno |
-| Others | Nothing fits yet | Chat, video conferencing |
-
-Repositories follow concerns: `<team>/<concern>/<tool>`, for example `devops/networking/haproxy`. One repository per tool; environments live inside it, never in its name. The apps the team delivers sit under CI/CD: `devops/cicd/apps/<app>`.
-
-**Placing a new tool:** if the tool were removed, what need would remain? Place it in that need's group. No match goes to Others. When several tools in Others share a need, it becomes a new group.
+The groups are the concerns: Networking, Orchestration, CI/CD, Observability, Data, Security and Others. A new tool is placed by [placing a tool](../4-practices/placing-a-tool.md), and a new concern opens a new group.
 
 ## Rotation
 
@@ -49,29 +41,29 @@ Repositories follow concerns: `<team>/<concern>/<tool>`, for example `devops/net
 - Each rotation, exactly one of each engineer's groups changes. Everyone rotates.
 - Engineers are split into **cohorts** that rotate in different months, so no group loses many people at once. Moves balance inside each cohort: whoever leaves a group is replaced by someone from the same cohort.
 - Before each rotation, every engineer in the cohort ranks the groups they'd like to join. A published scheme decides who moves where and follows those rankings as far as group sizes allow.
-- **Handover** is the group's recipe, its standards gap and one walkthrough. The leaving engineer stays reachable for the handover window.
+- **Handover** is the group's charter, its standards gap and one walkthrough. The leaving engineer stays reachable for the handover window.
 - A newcomer joins the group's on-call only after the newcomer wait.
 - New engineers join at their cohort's rotation point.
 
 ## Partners
 
-Partners are specialists from other teams who work with a group, such as a DBA with Data. They read changelogs, vote, and are consulted on changes that affect them. They don't write a group's recipe.
+Partners are specialists from other teams who work with a group, such as a DBA with Data. They read changelogs, vote, and are consulted on changes that affect them. They don't write a group's charter.
 
 ## Standards and R&D
 
-The team adopts a written manifesto ([sample](standards/MANIFESTO.md)). Each group keeps a visible list of where it falls short: its **standards gap**. R&D works to close it. Experiments stay out of production until proven, and every result is published.
+The team's standards are the [values](../1-values/manifesto.md) and the [conventions](../3-conventions/) it has adopted. Each group keeps a visible list of where its tools fall short of them: its **standards gap**. R&D works to close it. Experiments stay out of production until proven, and every result is published.
 
 ## Rule 1: Minimum weekly output
 
-Each group sets a weekly minimum in its recipe and delivers it no matter what. It decides what counts.
+Each group sets a weekly minimum in its charter and delivers it no matter what. It decides what counts.
 
-## Rule 2: Each group writes its own recipe
+## Rule 2: Each group writes its own charter
 
-Each group writes a [recipe](templates/recipe.md): how it decides, who leads, how work is shared. Nobody outside approves it. It is renewed once a year.
+Each group writes a [charter](../templates/charter.md): how it decides, who leads, how work is shared. Nobody outside approves it. It is renewed once a year.
 
 ## Rule 3: Weekly changelog, voting and reliability
 
-Each group publishes a [weekly changelog](templates/weekly-changelog.md). Every item names who did it.
+Each group publishes a [weekly changelog](../templates/weekly-changelog.md). Every item names who did it.
 
 Anyone the group's work affects can vote thumbs up or down: the team, partners, and teams the group serves. Only cast votes count, and a week counts only when it reaches the minimum turnout.
 
@@ -84,7 +76,7 @@ These are counted automatically, not judged by the manager. Then:
 
 1. The group holds an open session.
 2. If it continues, the group reviews its workflow and publishes the changes.
-3. If it still continues, the rest of the team writes that group's recipe until it recovers.
+3. If it still continues, the rest of the team writes that group's charter until it recovers.
 
 ## Rule 4: One gateway per group
 
@@ -92,7 +84,7 @@ Each group has one contact person, permanent or rotating weekly or monthly, neve
 
 ## Between groups
 
-- **Changing another group's tools** needs a [change request](templates/change-request.md). The owning group decides within the answer time. No answer means agreed. A declined requester may log an objection, which the owning group must answer at the next rotation point. There is no team vote.
+- **Changing another group's tools** needs a [change request](../templates/change-request.md). The owning group decides within the answer time. No answer means agreed. A declined requester may log an objection, which the owning group must answer at the next rotation point. There is no team vote.
 - **Work spanning several groups** is owned end to end by whoever starts it. The other groups support it through their gateways.
 - **Borrowing:** a short-handed group may borrow an engineer from another group for up to the borrow limit, if both gateways agree. The manager is not involved.
 
@@ -117,7 +109,7 @@ The model keeps the manager and HR out of collecting evidence:
 
 ## The manager
 
-Manager decisions are followed; overrides are noted in the changelog. The manager gets a weekly summary and a monthly value report ([MEASURING.md](MEASURING.md)).
+Manager decisions are followed; overrides are noted in the changelog. The manager gets a weekly summary and a monthly value report ([measuring](measuring.md)).
 
 ## Scaling
 
@@ -127,16 +119,16 @@ Manager decisions are followed; overrides are noted in the changelog. The manage
 | Medium (7–20) | 2–3 | 2–3 | Per group or shared |
 | Large (20+) | 2–3 | 3 | Per group |
 
-A group with too many engineers splits into two concerns. A short-handed group borrows now and gets more engineers at the next rotation point.
+A group with too many engineers splits into two concerns, and a new concern opens a new group ([placing a tool](../4-practices/placing-a-tool.md#growing-a-new-concern)). A short-handed group borrows now and gets more engineers at the next rotation point.
 
 ## Core rules
 
-Changing any of these means you're no longer running Open Kitchen.
+Changing any of these means you're no longer running this model.
 
 - Governs the DevOps team only.
 - Values ranked as above.
 - One group per concern; one group per tool.
-- Each group writes its own recipe.
+- Each group writes its own charter.
 - One group per engineer changes each rotation.
 - Only sustained unhappiness or unreliability forces a review.
 - Weekly changelog and minimum output.
@@ -147,7 +139,7 @@ Changing any of these means you're no longer running Open Kitchen.
 
 ## Defaults
 
-Tune these in your [team record](templates/team.md).
+Tune these in your [team record](../templates/team.md).
 
 | Default | Value |
 | --- | --- |

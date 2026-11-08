@@ -1,8 +1,10 @@
-# Measuring Value
+# Measuring
 
-Three layers, each for a different audience.
+*Layer 2 of the [DevOps Operating Model](../README.md): who.*
 
-## 1. Team health
+How the team proves its value, in three views, each for a different audience. The business view puts [belief 16](../1-values/principles.md#16-marketing-brings-the-users-tech-keeps-them) into numbers.
+
+## Team health
 
 | Signal | Measure |
 | --- | --- |
@@ -15,7 +17,7 @@ Three layers, each for a different audience.
 | Standards gap | Open items per group |
 | Gateway response | Time to acknowledge requests |
 
-## 2. Delivery (DORA)
+## Delivery (DORA)
 
 | Metric | Measures |
 | --- | --- |
@@ -27,7 +29,7 @@ Three layers, each for a different audience.
 
 Add reliability: share of time each service meets its SLOs. Compare a group only with its own past.
 
-## 3. Business value
+## Business value
 
 Every notable change names a currency and a number.
 
@@ -44,9 +46,9 @@ Every notable change names a currency and a number.
 
 | Rhythm | Report | Audience |
 | --- | --- | --- |
-| Weekly | [Changelog](templates/weekly-changelog.md) | Everyone |
-| Weekly | [Summary](templates/weekly-summary.md) | Manager |
-| Monthly | [Value report](templates/value-report.md) | Manager and peers |
+| Weekly | [Changelog](../templates/weekly-changelog.md) | Everyone |
+| Weekly | [Summary](../templates/weekly-summary.md) | Manager |
+| Monthly | [Value report](../templates/value-report.md) | Manager and peers |
 | Quarterly | Maturity review | Team and manager |
 
 ## Maturity

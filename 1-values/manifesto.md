@@ -1,8 +1,18 @@
-# DevOps Manifesto
+# Manifesto
 
-*A sample of team standards for Open Kitchen.*
+*Layer 1 of the [DevOps Operating Model](../README.md): why.*
 
-These are the beliefs of Hatam Abolghasemi, learned over four years of DevOps work. They are one team's answer to what good work means, not part of the [model](../MODEL.md). A team can adopt them as they are, change them, or write its own. The [principles](PRINCIPLES.md) explain each belief and how it shows up in daily work.
+These are the beliefs of Hatam Abolghasemi, learned over four years of DevOps work. Every other layer of this repository is built on them. A team can adopt them as they are, change them, or write its own; the rest of the model still works, but the links from conventions back to beliefs must then be updated. The [principles](principles.md) explain each belief and how it shows up in daily work.
+
+## System values
+
+In this order. When two collide, the higher one wins.
+
+1. **Recovery.** How fast we detect, understand and recover from failure.
+2. **Predictability.** The system does only what is written down.
+3. **Efficiency.** We pay only for what is needed.
+
+## Beliefs
 
 1. **Incidents are inevitable. Slow recovery is not.** Post-mortems exist to find ways to minimize MTTR.
 2. **`print` before `return`.** Metrics and measurement before production.
@@ -21,5 +31,3 @@ These are the beliefs of Hatam Abolghasemi, learned over four years of DevOps wo
 15. **Greater pain now is better than gradual pain forever.** Don't carry corpses around: burn them to the ground or bring them back to life.
 16. **Marketing brings the users. Tech keeps them.** Every decision ends in money, time, risk or customer experience, and every action translates into business metrics.
 17. **Nothing is frozen, this repo included.** Every decision carries a date to check it again.
-
-*Recovery first, predictability second, efficiency third.*

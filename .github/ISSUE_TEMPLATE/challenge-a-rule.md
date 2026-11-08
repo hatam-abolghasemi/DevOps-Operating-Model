@@ -10,7 +10,7 @@ labels: rule
 
 ## What breaks
 
-<the situation where it fails, and the brigade size if it matters>
+<the situation where it fails, and the team size if it matters>
 
 ## Proposal
 

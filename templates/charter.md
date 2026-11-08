@@ -1,6 +1,6 @@
-# <Group> Recipe
+# <Group> Charter
 
-Model version: Open Kitchen v1.0.2
+Model version: DevOps Operating Model v<X.Y.Z>
 Last renewed: <date>
 
 ## Engineers
@@ -13,7 +13,7 @@ Last renewed: <date>
 
 ## What we handle
 
-<the concern and its tools>
+<the concern and its tools, under <team>/<concern>/>
 
 ## R&D
 

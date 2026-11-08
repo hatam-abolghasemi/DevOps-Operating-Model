@@ -4,12 +4,33 @@ All notable changes to Open Kitchen are documented here. Versions follow the [ve
 
 ## [Unreleased]
 
+The repository grows from a team model into a whole operating model: values, team, conventions and practices, in four layers that link to each other.
+
+### Added
+
+- Four layers, read in order: `1-values/` (why), `2-team/` (who), `3-conventions/` (what) and `4-practices/` (how). The README explains how they connect.
+- Conventions: concerns (the spine shared by groups and repositories), naming (general rules, repositories, clusters and environments), Kubernetes (namespaces, components, objects, labels, field order) and Argo CD. Each convention cites the belief it comes from.
+- Practices: placing a tool (including growing a new concern out of `others`), replacing a cluster, releasing and changing the model.
+- The manifesto states the system values (recovery, predictability, efficiency) at the top.
+- The team record names the group that owns the team's copy of the model.
+- FAQ sections for values and conventions.
+
 ### Changed
 
-- Repositories are named `<team>/<concern>/<tool>`, without the environment. Environments live inside the repository. App repositories sit under `devops/cicd/apps/<app>`.
-- Concerns: Orchestration is now Compute ("where things run"), Networking covers traffic at any OSI layer, and Data covers storing data and keeping it safe.
-- Sample principles: the environment is no longer part of a name (principles 8 and 11), and the production environment is spelled `prd` (principle 9).
+- Renamed the project from Open Kitchen to DevOps Operating Model, and the repository to `devops-operating-model`.
+- Renamed recipes to charters, and `templates/recipe.md` to `templates/charter.md`.
+- Moved `standards/MANIFESTO.md` and `standards/PRINCIPLES.md` to `1-values/manifesto.md` and `1-values/principles.md`; the manifesto is now the base of the model, not a sample beside it.
+- Moved `MODEL.md` and `MEASURING.md` to `2-team/model.md` and `2-team/measuring.md`. The model's values are now called team values, and its principles list is now "In short", so neither is confused with layer 1.
+- `ADOPTING.md` covers all four layers, in order.
+- Groups are defined once, by the concerns convention, instead of in a table inside the team model.
+- Repositories are named `<team>/<concern>/<tool>`, without the environment. Environments live inside the repository. App repositories sit under `<team>/cicd/apps/<app>`.
+- Concerns: Networking covers traffic at any OSI layer, Data covers storing data and keeping it safe, and image distribution and registries belong to CI/CD.
+- Principles: the environment is no longer part of a name (principles 8 and 11), and the production environment is spelled `prd` (principle 9).
 - Weekly changelog template: items name the environment as `<tool> (<environment>)`.
+
+### Removed
+
+- The `owner` namespace label: the `group` label already names the concern, and each concern has one owning group.
 
 ## [1.0.2] - 2026-10-28
 
@@ -64,6 +85,6 @@ First public version.
 - Sample house standards: the author's DevOps manifesto (17 beliefs) and principles.
 - Templates: brigade record, counter charter, weekly changelog, weekly manager summary, monthly value report, change request.
 
-[1.0.2]: https://github.com/hatam-abolghasemi/open-kitchen/releases/tag/v1.0.2
-[1.0.1]: https://github.com/hatam-abolghasemi/open-kitchen/releases/tag/v1.0.1
-[1.0.0]: https://github.com/hatam-abolghasemi/open-kitchen/releases/tag/v1.0.0
+[1.0.2]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v1.0.2
+[1.0.1]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v1.0.1
+[1.0.0]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v1.0.0

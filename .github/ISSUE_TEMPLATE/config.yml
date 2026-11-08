@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Question or debate about a rule
-    url: https://github.com/hatam-abolghasemi/open-kitchen/discussions
+    url: https://github.com/hatam-abolghasemi/devops-operating-model/discussions
     about: Is a rule right at all? Start a discussion first.
-  - name: Report from a brigade running the model
-    url: https://github.com/hatam-abolghasemi/open-kitchen/discussions
-    about: Share your brigade size, what worked, what broke and what you tuned.
+  - name: Report from a team running the model
+    url: https://github.com/hatam-abolghasemi/devops-operating-model/discussions
+    about: Share your team size, what worked, what broke and what you tuned.
