@@ -4,6 +4,14 @@ All notable changes to the DevOps Operating Model (named Open Kitchen until 2.0.
 
 ## [Unreleased]
 
+### Added
+
+- Images convention: registry paths mirror repository paths, upstream images keep their path behind a proxy cache, tools are tagged by release version and apps by commit SHA, tags never move, manifests and `FROM` lines reference images by tag and digest, any base OS is allowed, and images never run as root.
+
+### Removed
+
+- Container images from the FAQ's open challenges.
+
 ## [2.0.0] - 2026-11-08
 
 The repository grows from a team model into a whole operating model: values, team, conventions and practices, in four layers that link to each other.

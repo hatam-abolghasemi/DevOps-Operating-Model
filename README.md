@@ -10,7 +10,7 @@ This repository keeps all four together, in layers. Each layer is built on the o
 | --- | --- | --- |
 | [1. Values](1-values/) | Why | [Manifesto](1-values/manifesto.md): system values and 17 beliefs. [Principles](1-values/principles.md): why each belief holds and how it shows up in daily work. |
 | [2. Team](2-team/) | Who | [Model](2-team/model.md): team values, concern groups, rotation, ownership. [Measuring](2-team/measuring.md): how the team proves its value. |
-| [3. Conventions](3-conventions/) | What | [Concerns](3-conventions/concerns.md), [naming](3-conventions/naming.md), [Kubernetes](3-conventions/kubernetes.md), [Argo CD](3-conventions/argocd.md). |
+| [3. Conventions](3-conventions/) | What | [Concerns](3-conventions/concerns.md), [naming](3-conventions/naming.md), [images](3-conventions/images.md), [Kubernetes](3-conventions/kubernetes.md), [Argo CD](3-conventions/argocd.md). |
 | [4. Practices](4-practices/) | How | [Placing a tool](4-practices/placing-a-tool.md), [replacing a cluster](4-practices/replacing-a-cluster.md), [releasing](4-practices/releasing.md), [changing the model](4-practices/changing-the-model.md). |
 
 [Templates](templates/) are ready to copy. [ADOPTING.md](ADOPTING.md) is the starting point, and [FAQ.md](FAQ.md) answers common questions.

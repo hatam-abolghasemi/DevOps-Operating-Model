@@ -38,6 +38,7 @@ It is named `[<qualifier>-]<entry>`, where the entry is how work reaches it:
 - A SealedSecret has the name of the Secret it produces.
 - Container name = component name.
 - Port names: `http`, `grpc`, `metrics`.
+- Images are referenced by tag and digest ([images](images.md#references)).
 
 ## Labels and annotations
 

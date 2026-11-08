@@ -42,6 +42,9 @@ Concerns outlive tools and overlap least. A team split by business domain repeat
 **Why no environment in names?**
 The environment is where something runs, not what it is ([belief 8](1-values/principles.md#8-a-name-is-a-self-documenting-identifier)). Putting it in the name multiplies repositories and breaks when things move.
 
+**Why are images referenced by digest too?**
+A tag is for people and can be moved by mistake; a digest can't. Writing both keeps the manifest readable and what runs exact ([images](3-conventions/images.md#references)).
+
 **Why no owner label?**
 Each concern has exactly one owning group, and the `group` label already names the concern. A second label would be a second place to keep in sync.
 
@@ -51,6 +54,5 @@ Each concern has exactly one owning group, and the `group` label already names t
 - Organized voting by a few unhappy teams.
 - Mapping to OKRs or sprints.
 - How much say partners should have.
-- Conventions for container images.
 
 Ideas welcome in [Discussions](https://github.com/hatam-abolghasemi/devops-operating-model/discussions).

@@ -2,7 +2,7 @@
 
 *Layer 3 of the [DevOps Operating Model](../README.md): what.*
 
-Naming and placement rules for everything the team runs. They put [belief 8](../1-values/principles.md#8-a-name-is-a-self-documenting-identifier) (a name identifies, it doesn't describe) and [belief 9](../1-values/principles.md#9-one-thing-one-name-everywhere) (one thing, one name, everywhere) into practice. Container images are out of scope for now.
+Naming and placement rules for everything the team runs. They put [belief 8](../1-values/principles.md#8-a-name-is-a-self-documenting-identifier) (a name identifies, it doesn't describe) and [belief 9](../1-values/principles.md#9-one-thing-one-name-everywhere) (one thing, one name, everywhere) into practice. Container images follow [images](images.md).
 
 ## General
 

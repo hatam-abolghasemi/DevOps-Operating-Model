@@ -8,7 +8,7 @@ Adopt the layers in order. Each one depends on the one before.
 
 1. **Values.** Read the [manifesto](1-values/manifesto.md). Keep it, change it, or write your own. If you change a belief, follow its links down to the conventions that cite it.
 2. **Team.** Answer the team decisions below and fill in the [team record](templates/team.md).
-3. **Conventions.** Start with [concerns](3-conventions/concerns.md) and [naming](3-conventions/naming.md); they shape the groups and the repositories. Apply [Kubernetes](3-conventions/kubernetes.md) and [Argo CD](3-conventions/argocd.md) to new work first, and to existing work as each group closes its standards gap.
+3. **Conventions.** Start with [concerns](3-conventions/concerns.md) and [naming](3-conventions/naming.md); they shape the groups and the repositories. Apply [images](3-conventions/images.md), [Kubernetes](3-conventions/kubernetes.md) and [Argo CD](3-conventions/argocd.md) to new work first, and to existing work as each group closes its standards gap.
 4. **Practices.** Use them from day one; they need nothing but the layers above.
 
 ## Team decisions
