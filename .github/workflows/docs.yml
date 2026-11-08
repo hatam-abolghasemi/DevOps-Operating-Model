@@ -38,12 +38,27 @@ jobs:
   links:
     name: Links
     runs-on: ubuntu-24.04
+    env:
+      LYCHEE_VERSION: "0.24.2"
+      LYCHEE_SHA256: 1f4e0ef7f6554a6ed33dd7ac144fb2e1bbed98598e7af973042fc5cd43951c9a
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ inputs.ref }}
           persist-credentials: false
-      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
-        with:
-          args: --no-progress --include-fragments --exclude "github.com/hatam-abolghasemi/devops-operating-model" "**/*.md"
-          fail: true
+      # Installed by hand rather than through lychee-action: GitHub's release
+      # downloads fail now and then, and the action tries only once.
+      - name: Install lychee ${{ env.LYCHEE_VERSION }}
+        run: |
+          f=lychee-x86_64-unknown-linux-gnu
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 5 -o "$RUNNER_TEMP/$f.tar.gz" \
+            "https://github.com/lycheeverse/lychee/releases/download/lychee-v${LYCHEE_VERSION}/$f.tar.gz"
+          echo "${LYCHEE_SHA256}  $RUNNER_TEMP/$f.tar.gz" | sha256sum -c -
+          tar -xzf "$RUNNER_TEMP/$f.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/$f" >> "$GITHUB_PATH"
+      # The token lifts GitHub's rate limit on the github.com links, as the
+      # action did.
+      - name: Check links
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: lychee --version && lychee --no-progress --include-fragments --exclude "github.com/hatam-abolghasemi/devops-operating-model" "**/*.md"
