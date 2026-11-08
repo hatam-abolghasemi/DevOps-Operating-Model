@@ -4,6 +4,8 @@ All notable changes to the DevOps Operating Model (named Open Kitchen until 2.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-11-08
+
 The repository grows from a team model into a whole operating model: values, team, conventions and practices, in four layers that link to each other.
 
 ### Added
@@ -90,6 +92,7 @@ First public version.
 - Sample house standards: the author's DevOps manifesto (17 beliefs) and principles.
 - Templates: brigade record, counter charter, weekly changelog, weekly manager summary, monthly value report, change request.
 
+[2.0.0]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v2.0.0
 [1.0.2]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v1.0.2
 [1.0.1]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v1.0.1
 [1.0.0]: https://github.com/hatam-abolghasemi/devops-operating-model/releases/tag/v1.0.0
