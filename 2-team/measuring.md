@@ -2,7 +2,7 @@
 
 *Layer 2 of the [DevOps Operating Model](../README.md): who.*
 
-How the team proves its value, in three views, each for a different audience. The business view puts [belief 16](../1-values/principles.md#16-marketing-brings-the-users-tech-keeps-them) into numbers.
+How the team proves its value, in three views, each for a different audience. The business view puts [principle 16](../1-values/principles.md#16-marketing-brings-the-users-tech-keeps-them) into numbers.
 
 ## Team health
 

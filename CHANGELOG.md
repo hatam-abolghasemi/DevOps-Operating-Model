@@ -8,6 +8,13 @@ All notable changes to the DevOps Operating Model (named Open Kitchen until 2.0.
 
 - Images convention: registry paths mirror repository paths, upstream images keep their path behind a proxy cache, tools are tagged by release version and apps by commit SHA, tags never move, manifests and `FROM` lines reference images by tag and digest, any base OS is allowed, and images never run as root.
 
+### Changed
+
+- The manifesto's beliefs are now principles: the manifesto states them in short, and each one links to its section in `1-values/principles.md`, which explains it. Every "belief N" citation across the layers is now "principle N".
+- The manifesto and principles no longer say whose they are or where they came from; they stand on their own.
+- Releases are cut by pushing an annotated `vX.Y.Z` tag instead of by a version heading reaching `main`. The release is titled `vX.Y.Z — <tag message>`, fails if the changelog section or `CITATION.cff` doesn't match the tag, and can be rerun for an existing tag. `4-practices/releasing.md` describes the new steps.
+- The docs checks also run on pull requests and by hand.
+
 ### Removed
 
 - Container images from the FAQ's open challenges.

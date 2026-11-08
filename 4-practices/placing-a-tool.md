@@ -6,7 +6,7 @@ How a tool gets its one home. It carries out the [concerns](../3-conventions/con
 
 ## Before placing
 
-The tool has earned its way in: it solves a real, current problem ([belief 13](../1-values/principles.md#13-solve-real-current-vital-problems)), and the requirement chose it, not the other way around ([belief 14](../1-values/principles.md#14-requirements-choose-tools-not-the-other-way-around)).
+The tool has earned its way in: it solves a real, current problem ([principle 13](../1-values/principles.md#13-solve-real-current-vital-problems)), and the requirement chose it, not the other way around ([principle 14](../1-values/principles.md#14-requirements-choose-tools-not-the-other-way-around)).
 
 ## Steps
 
@@ -29,4 +29,4 @@ Either way:
 3. The team opens a new group for it at the next rotation point ([scaling](../2-team/model.md#scaling)).
 4. The change is recorded as described in [changing the model](changing-the-model.md).
 
-Tools never wait in `others` forever: each re-check ([belief 17](../1-values/principles.md#17-nothing-is-frozen-this-repo-included)) asks whether a new concern has formed there.
+Tools never wait in `others` forever: each re-check ([principle 17](../1-values/principles.md#17-nothing-is-frozen-this-repo-included)) asks whether a new concern has formed there.

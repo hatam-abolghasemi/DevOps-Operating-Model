@@ -51,8 +51,8 @@ It is named `[<qualifier>-]<entry>`, where the entry is how work reaches it:
 
 - Selectors use `component` only. Shared objects carry no `component` label.
 - Ownership is never labelled. The `group` label already names the concern, and each concern has exactly one owning [group of engineers](../2-team/model.md#groups).
-- These are the only labels we write. Tools that expect others are configured to read these instead ([belief 9](../1-values/principles.md#9-one-thing-one-name-everywhere)).
+- These are the only labels we write. Tools that expect others are configured to read these instead ([principle 9](../1-values/principles.md#9-one-thing-one-name-everywhere)).
 
 ## Field order
 
-`apiVersion`, `kind`, `metadata` (`name`, `namespace`, `labels`, `annotations`), `spec`. `namespace` is always explicit ([belief 6](../1-values/principles.md#6-default-is-not-for-production)).
+`apiVersion`, `kind`, `metadata` (`name`, `namespace`, `labels`, `annotations`), `spec`. `namespace` is always explicit ([principle 6](../1-values/principles.md#6-default-is-not-for-production)).

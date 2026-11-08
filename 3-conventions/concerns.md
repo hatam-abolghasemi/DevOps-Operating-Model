@@ -24,6 +24,6 @@ Every tool belongs to exactly one concern. To find it, imagine removing the tool
 
 ## Why concerns
 
-- **They outlive tools.** A team split by tool rebuilds itself every time a tool is replaced. A need like "traffic at any OSI layer" lasts for years ([belief 17](../1-values/manifesto.md)).
-- **They overlap least.** A tool has one main need, so it has one home. Splitting by mechanism ("everything containerized", "everything Helm") puts one tool in many places ([belief 7](../1-values/principles.md#7-every-translation-has-a-daily-cost)).
-- **One name, everywhere.** The same word names the group of engineers, the repository group and the `group` label on every namespace ([belief 9](../1-values/principles.md#9-one-thing-one-name-everywhere)).
+- **They outlive tools.** A team split by tool rebuilds itself every time a tool is replaced. A need like "traffic at any OSI layer" lasts for years ([principle 17](../1-values/manifesto.md)).
+- **They overlap least.** A tool has one main need, so it has one home. Splitting by mechanism ("everything containerized", "everything Helm") puts one tool in many places ([principle 7](../1-values/principles.md#7-every-translation-has-a-daily-cost)).
+- **One name, everywhere.** The same word names the group of engineers, the repository group and the `group` label on every namespace ([principle 9](../1-values/principles.md#9-one-thing-one-name-everywhere)).

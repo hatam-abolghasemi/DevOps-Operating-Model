@@ -14,9 +14,9 @@ Rules for container images: where they live, how they are tagged, and how manife
 
 For example `<registry>/devops/cicd/angryduck`, `<registry>/devops/cicd/apps/orders` and `<registry>/dockerhub/library/redis`.
 
-- An image the team builds has the path of its repository. One thing, one name, in Git and in the registry ([belief 9](../1-values/principles.md#9-one-thing-one-name-everywhere)).
+- An image the team builds has the path of its repository. One thing, one name, in Git and in the registry ([principle 9](../1-values/principles.md#9-one-thing-one-name-everywhere)).
 - An upstream image is pulled through a proxy cache and keeps its upstream path. The proxy is named after the upstream registry: `dockerhub`, `ghcr`, `quay`, `registry-k8s`.
-- The environment never appears in a path or a tag. One image is built once and promoted through `stg` to `prd` unchanged ([belief 11](../1-values/principles.md#11-environments-exist-to-separate-the-different-classes-of-failure-blast-radius)).
+- The environment never appears in a path or a tag. One image is built once and promoted through `stg` to `prd` unchanged ([principle 11](../1-values/principles.md#11-environments-exist-to-separate-the-different-classes-of-failure-blast-radius)).
 
 ## Tags
 
@@ -27,7 +27,7 @@ For example `<registry>/devops/cicd/angryduck`, `<registry>/devops/cicd/apps/ord
 | Upstream | Upstream's own version tag | `redis:7.2.4` |
 
 - Tags never move. A pushed tag is never overwritten; a fix is a new tag.
-- No `latest`, and no floating tags such as `7` or `stable`. A tag that changes on its own is a default nobody chose ([belief 6](../1-values/principles.md#6-default-is-not-for-production)).
+- No `latest`, and no floating tags such as `7` or `stable`. A tag that changes on its own is a default nobody chose ([principle 6](../1-values/principles.md#6-default-is-not-for-production)).
 
 ## References
 
@@ -43,4 +43,4 @@ The tag tells a person what runs; the digest guarantees it. Both are written, so
 
 - Any base OS is allowed. The group that owns the image chooses it.
 - The base is pinned by tag and digest in the `FROM` line, the same way manifests reference images.
-- Images never run as root ([belief 10](../1-values/principles.md#10-failure-blast-radius-decides-how-much-is-enough)'s security baseline). The Dockerfile sets a non-root `USER`.
+- Images never run as root ([principle 10](../1-values/principles.md#10-failure-blast-radius-decides-how-much-is-enough)'s security baseline). The Dockerfile sets a non-root `USER`.

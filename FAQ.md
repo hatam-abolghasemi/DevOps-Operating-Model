@@ -2,8 +2,8 @@
 
 ## Values
 
-**Do we have to adopt these beliefs?**
-No. They are one engineer's beliefs, and the rest of the model works with your own. Conventions cite beliefs, so update those links when you change one.
+**Do we have to adopt these principles?**
+No. The rest of the model works with your own. Conventions cite principles, so update those links when you change one.
 
 **Why two value ladders?**
 They judge different things. System values judge how systems behave; team values judge how people organize. Reliability, the first team value, is where they meet.
@@ -40,7 +40,7 @@ No. DevOps Research and Assessment.
 Concerns outlive tools and overlap least. A team split by business domain repeats the same tools in every domain, and a team split by tool reorganizes every time a tool is replaced. See [concerns](3-conventions/concerns.md#why-concerns).
 
 **Why no environment in names?**
-The environment is where something runs, not what it is ([belief 8](1-values/principles.md#8-a-name-is-a-self-documenting-identifier)). Putting it in the name multiplies repositories and breaks when things move.
+The environment is where something runs, not what it is ([principle 8](1-values/principles.md#8-a-name-is-a-self-documenting-identifier)). Putting it in the name multiplies repositories and breaks when things move.
 
 **Why are images referenced by digest too?**
 A tag is for people and can be moved by mistake; a digest can't. Writing both keeps the manifest readable and what runs exact ([images](3-conventions/images.md#references)).

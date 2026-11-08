@@ -12,6 +12,6 @@ The environment's name belongs to whichever cluster serves it. Only the outgoing
 2. **Rename the outgoing cluster** from `<env>` to `<env>-old`. Its Applications regenerate as `<name>-<env>-old`; the workloads keep running.
 3. **Register the new cluster** as `<env>`. Its Applications generate as `<name>-<env>`, with the same names the old cluster used to have.
 4. **Migrate** traffic and state, one tool or app at a time. Each move appears in the owning group's [weekly changelog](../templates/weekly-changelog.md).
-5. **Delete `<env>-old`** once the migration ends. Old and new never live side by side for good ([belief 15](../1-values/principles.md#15-greater-pain-now-is-better-than-gradual-pain-forever)).
+5. **Delete `<env>-old`** once the migration ends. Old and new never live side by side for good ([principle 15](../1-values/principles.md#15-greater-pain-now-is-better-than-gradual-pain-forever)).
 
 The same idea holds for any live workload: renaming one, or changing its selector, means delete and recreate, so it always comes with a migration plan.

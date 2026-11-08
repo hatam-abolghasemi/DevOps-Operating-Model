@@ -2,7 +2,7 @@
 
 *Layer 3 of the [DevOps Operating Model](../README.md): what.*
 
-Naming and placement rules for everything the team runs. They put [belief 8](../1-values/principles.md#8-a-name-is-a-self-documenting-identifier) (a name identifies, it doesn't describe) and [belief 9](../1-values/principles.md#9-one-thing-one-name-everywhere) (one thing, one name, everywhere) into practice. Container images follow [images](images.md).
+Naming and placement rules for everything the team runs. They put [principle 8](../1-values/principles.md#8-a-name-is-a-self-documenting-identifier) (a name identifies, it doesn't describe) and [principle 9](../1-values/principles.md#9-one-thing-one-name-everywhere) (one thing, one name, everywhere) into practice. Container images follow [images](images.md).
 
 ## General
 
@@ -23,13 +23,13 @@ For example `devops/networking/haproxy` and `devops/cicd/apps/orders`.
 
 - **Concern:** one of the [concerns](concerns.md).
 - **Tool:** infrastructure software, upstream or the team's own. Named after the project: `loki`, `haproxy`, `angryduck`.
-- **App:** an application the company builds for its business. Its repository holds the desired state the delivery pipeline writes and deploys from ([belief 5](../1-values/principles.md#5-x-as-git)).
+- **App:** an application the company builds for its business. Its repository holds the desired state the delivery pipeline writes and deploys from ([principle 5](../1-values/principles.md#5-x-as-git)).
 - One repository per tool or app. Environments live inside the repository (overlays, inventories), never in its name.
 - Each repository belongs to exactly one group: the group of its concern. Apps belong to the CI/CD group.
 
 ## Clusters and environments
 
-Environments follow [belief 11](../1-values/principles.md#11-environments-exist-to-separate-the-different-classes-of-failure-blast-radius): each one separates a class of failure from production.
+Environments follow [principle 11](../1-values/principles.md#11-environments-exist-to-separate-the-different-classes-of-failure-blast-radius): each one separates a class of failure from production.
 
 - One cluster per environment; the cluster is the environment.
 - Environment names: `prd`, `dr`, `uat`, `stg`, `dev`. These spellings are used everywhere: clusters, labels, dashboards, docs and changelogs.

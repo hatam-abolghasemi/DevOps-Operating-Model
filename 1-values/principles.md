@@ -2,9 +2,9 @@
 
 *Layer 1 of the [DevOps Operating Model](../README.md): why.*
 
-The [manifesto](manifesto.md) states what we believe. This document explains each belief and how it shows up in daily work. The examples come from the author's own work; replace them with yours if you adopt these beliefs.
+The [manifesto](manifesto.md) states the principles in short. This document explains each one and how it shows up in daily work. Replace the examples with your own if you adopt them.
 
-Every section below has the same shape: the belief, **why** we hold it, and what it looks like **in practice**. Inside "in practice", the rule comes first, then the mechanism, then concrete examples. Where a belief turns into a written rule, the rule lives in the [conventions](../3-conventions/) and links back here.
+Every section below has the same shape: the principle, **why** we hold it, and what it looks like **in practice**. Inside "in practice", the rule comes first, then the mechanism, then concrete examples. Where a principle turns into a written rule, the rule lives in the [conventions](../3-conventions/) and links back here.
 
 ---
 
