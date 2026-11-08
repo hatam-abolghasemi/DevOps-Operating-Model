@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Open Kitchen are documented here. Versions follow the [versioning policy](CONTRIBUTING.md#versioning).
+All notable changes to the DevOps Operating Model (named Open Kitchen until 2.0.0) are documented here. Versions follow the [versioning policy](CONTRIBUTING.md#versioning).
 
 ## [Unreleased]
 
@@ -27,6 +27,9 @@ The repository grows from a team model into a whole operating model: values, tea
 - Concerns: Networking covers traffic at any OSI layer, Data covers storing data and keeping it safe, and image distribution and registries belong to CI/CD.
 - Principles: the environment is no longer part of a name (principles 8 and 11), and the production environment is spelled `prd` (principle 9).
 - Weekly changelog template: items name the environment as `<tool> (<environment>)`.
+- Concerns change in only two ways, both in "adding a concern": a new concern grows out of `others`, or a group past the split size splits its concern in two.
+- The on-call rules name the emergency wait and emergency change review defaults they use.
+- Team record: "Standards" is now "Our copy of the model", and the team-level answers are "Our team decisions", matching the adoption guide.
 
 ### Removed
 

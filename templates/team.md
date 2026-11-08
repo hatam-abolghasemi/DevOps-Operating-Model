@@ -36,7 +36,7 @@ Changed from upstream: <none | values | conventions | practices, with links>
 | --- | --- | --- |
 | <default> | <value> | <value> |
 
-## Our answers to the team-level questions
+## Our team decisions
 
 1. <answer>
 

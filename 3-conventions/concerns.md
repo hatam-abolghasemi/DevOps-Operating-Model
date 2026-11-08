@@ -6,7 +6,7 @@ A concern is a lasting need the team serves. Concerns are the spine of the model
 
 ## The concerns
 
-The list is flat and fixed. Concerns never nest.
+The list is flat: concerns never nest. It changes in only two ways, both described in [adding a concern](../4-practices/placing-a-tool.md#adding-a-concern): a new concern grows out of `others`, or a crowded group splits its concern in two.
 
 | Concern | Need | Covers | Sample tools (not all in use) |
 | --- | --- | --- | --- |
@@ -20,7 +20,7 @@ The list is flat and fixed. Concerns never nest.
 
 ## Placing a tool
 
-Every tool belongs to exactly one concern. To find it, imagine removing the tool: the need that remains is its concern. The full procedure, including when `others` grows a new concern, is in [placing a tool](../4-practices/placing-a-tool.md).
+Every tool belongs to exactly one concern. To find it, imagine removing the tool: the need that remains is its concern. The full procedure is in [placing a tool](../4-practices/placing-a-tool.md).
 
 ## Why concerns
 

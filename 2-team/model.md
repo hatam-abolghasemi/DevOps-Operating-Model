@@ -33,12 +33,12 @@ In this order. When two collide, the higher one wins. They judge how people orga
 
 A group handles one [concern](../3-conventions/concerns.md) and owns every tool and repository in it: `<team>/<concern>/*` in [naming](../3-conventions/naming.md#repositories). Engineers belong to the team; group membership rotates.
 
-The groups are the concerns: Networking, Orchestration, CI/CD, Observability, Data, Security and Others. A new tool is placed by [placing a tool](../4-practices/placing-a-tool.md), and a new concern opens a new group.
+Each group is named after its concern: Networking (`networking`), Orchestration (`orchestration`), CI/CD (`cicd`), Observability (`observability`), Data (`data`), Security (`security`) and Others (`others`). A new tool is placed by [placing a tool](../4-practices/placing-a-tool.md), and a new concern opens a new group.
 
 ## Rotation
 
 - Every engineer is in several groups.
-- Each rotation, exactly one of each engineer's groups changes. Everyone rotates.
+- Each rotation period, exactly one of each engineer's groups changes. Everyone rotates.
 - Engineers are split into **cohorts** that rotate in different months, so no group loses many people at once. Moves balance inside each cohort: whoever leaves a group is replaced by someone from the same cohort.
 - Before each rotation, every engineer in the cohort ranks the groups they'd like to join. A published scheme decides who moves where and follows those rankings as far as group sizes allow.
 - **Handover** is the group's charter, its standards gap and one walkthrough. The leaving engineer stays reachable for the handover window.
@@ -93,7 +93,7 @@ Each group has one contact person, permanent or rotating weekly or monthly, neve
 - Each group publishes a monthly on-call list and spreads shifts evenly.
 - Whoever picks up an alert owns the incident and pulls in others as needed.
 - Emergency fixes skip the process and appear in the next changelog.
-- Outsiders may change a group's tools only during an incident, if its on-call engineer is unreachable. They report it right away, and the group may revert it.
+- Outsiders may change a group's tools only during an incident, if its on-call engineer stays unreachable for the emergency wait. They report it right away, and the group reviews it within the emergency change review time and may revert it.
 
 ## Change freezes
 
@@ -119,14 +119,14 @@ Manager decisions are followed; overrides are noted in the changelog. The manage
 | Medium (7–20) | 2–3 | 2–3 | Per group or shared |
 | Large (20+) | 2–3 | 3 | Per group |
 
-A group with too many engineers splits into two concerns, and a new concern opens a new group ([placing a tool](../4-practices/placing-a-tool.md#growing-a-new-concern)). A short-handed group borrows now and gets more engineers at the next rotation point.
+A group larger than the group split size splits its concern in two, and each new concern opens a new group ([adding a concern](../4-practices/placing-a-tool.md#adding-a-concern)). A short-handed group borrows now and gets more engineers at the next rotation point.
 
 ## Core rules
 
 Changing any of these means you're no longer running this model.
 
 - Governs the DevOps team only.
-- Values ranked as above.
+- Team values ranked as above.
 - One group per concern; one group per tool.
 - Each group writes its own charter.
 - One group per engineer changes each rotation.

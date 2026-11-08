@@ -15,12 +15,17 @@ The tool has earned its way in: it solves a real, current problem ([belief 13](.
 3. **Place it.** Create `<team>/<concern>/<tool>`, named as in [naming](../3-conventions/naming.md#repositories). The concern's group now owns it.
 4. **No concern fits?** Place it in `others`. Never invent a one-tool concern.
 
-## Growing a new concern
+## Adding a concern
 
-When several tools in `others` share the same underlying need, that need becomes a new concern:
+A new concern appears in one of two ways:
+
+- **It grows out of `others`:** several tools there share the same underlying need.
+- **A crowded group splits:** a group passes the group split size ([defaults](../2-team/model.md#defaults)), and its concern is split into two needs that each pass the removal question on their own.
+
+Either way:
 
 1. The need is named in one or two words, and added to the [concerns table](../3-conventions/concerns.md#the-concerns) with its definition.
-2. The repositories move to `<team>/<new-concern>/`, and their namespaces' `group` label changes with them.
+2. The repositories move to `<team>/<new-concern>/`, and their namespaces' `group` label changes with them, following a migration plan ([naming](../3-conventions/naming.md#general)).
 3. The team opens a new group for it at the next rotation point ([scaling](../2-team/model.md#scaling)).
 4. The change is recorded as described in [changing the model](changing-the-model.md).
 
